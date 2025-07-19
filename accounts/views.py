@@ -36,7 +36,7 @@ def user_logout(request):
 @login_required  
 def home(request):
     data = TodoList.objects.filter(user=request.user)
-    return render(request, 'home.html',{'tasks':data})
+    return render(request, 'index.html',{'tasks':data})
 
 @login_required
 def add(request):
